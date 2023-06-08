@@ -1,11 +1,50 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Web To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Kode CSS lainnya */
+    </style>
   </head>
   <body>
-    <h1>mantap</h1>
+    <div class="container">
+      <h1>Web To-Do List</h1>
+
+      <form id="todo-form">
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity" required />
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+          <option value="normal">Normal</option>
+          <option value="daily">Daily</option>
+          <option value="urgent">Urgent</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" name="color" required>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <!-- Tambahkan opsi warna lainnya sesuai kebutuhan -->
+        </select>
+
+        <div class="time-range">
+          <label for="startTime">Start Time:</label>
+          <input type="time" id="startTime" name="startTime" required />
+
+          <label for="endTime">End Time:</label>
+          <input type="time" id="endTime" name="endTime" required />
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div id="todo-list">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
